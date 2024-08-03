@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Information Management</title>
+</head>
+<body>
+<!-- This page will be called in views.py under function code -->
+<h1>Welcome to our Book Club Information</h1>
+<!-- to get data infomation from members I need to create a form -->
+<form method="POST" action="/save"> <!--request route in POST-->
+    {% csrf_token %}
+    <label>Member name</label>
+    <input type="text" name="member_name"> <!--key value for read from POST-->
+    <button type="submit">Save</button>
+</form>
+<a href="/shop">Shopping</a>
+
+</body>
+</html>
